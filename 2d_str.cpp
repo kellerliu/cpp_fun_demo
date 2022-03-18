@@ -46,6 +46,8 @@ void func3()
 
 void func4()
 {
+    //const char* buyers[][]= {{"b1","g1"}, {"b2","g2"}, {"b3","g3"}, {"b4","g4"}, {"b5","g5"}};//array has incomplete element type 'const char *[]'
+    //const char* buyers[10][2] = {{"b1","g1"}, {"b2","g2"}, {"b3","g3"}, {"b4","g4"}, {"b5","g5"}}; //segfault after 5 iteration
     const char* buyers[][2] = {{"b1","g1"}, {"b2","g2"}, {"b3","g3"}, {"b4","g4"}, {"b5","g5"}};
     for(size_t i = 0; i < sizeof(buyers)/sizeof(buyers[0]); ++i)
     {
